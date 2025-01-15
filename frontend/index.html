@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ai Blog Generator</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="flex flex-col min-h-screen bg-gray-100 font-sans antialiased">
+    <! -- Navbar -->
+    <nav class="bg-blue-600 p-4 text-white flex justify-between">
+      <div>
+        <h1 class="text-3xl font-bold">Ai Blog Generator</h1>
+      </div>
+      <div>
+        <a href="#" class="text-white hover:underline">Logout</a>
+      </div>
+    </nav>
+
+    <br />
+    <br />
+
+    <!-- Main Content -->
+    <div class="flex-grow container mx-auto mt-10 px-4 sm:px-0">
+      <div
+        class="mx-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 flex flex-col"
+      >
+        <!-- Introduction -->
+
+        <div class="text-center">
+          <h2 class="text-2xl font-semibold mb-4">
+            Welcome to Ai Blog Generator
+          </h2>
+          <p class="text-gray-700">
+            Generate high-quality blog articles from Youtube videos using
+            artificial intelligence. Simply enter the link to the Youtube video
+            below and let the Ai create the content for you!
+          </p>
+        </div>
+
+        <br />
+        <br />
+
+        <!-- YouTube Section -->
+        <div class="flex flex-col">
+          <label for="youtube-link" class="text-lg font-semibold">
+            Enter the link to the Youtube video
+          </label>
+          <div>
+            <input
+              type="url"
+              id="youtube-link"
+              placeholder="https://www.youtube.com/watch?v=..."
+              class="border border-gray-300 p-2 rounded-lg mt-2"
+            />
+
+            <button
+              id="generateBlogButton"
+              class="ml-10 bg-blue-600 text-white px-4 py-2 rounded-r-md hover:bg-blue-700 transition-colors"
+            >
+              Generate Blog
+            </button>
+          </div>
+        </div>
+
+        <br />
+
+        <!-- Generated Blog Section -->
+        <div class="flex flex-col">
+          <label for="generated-blog" class="text-lg font-semibold">
+            Generated Blog
+          </label>
+          <!-- Section for loading circle -->
+          <div style="display: none" id="loading-circle" class="load"></div>
+
+          <textarea
+            id="generated-blog"
+            class="border border-gray-300 p-2 rounded-lg mt-2"
+            rows="10"
+            readonly
+          ></textarea>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-blue-600 text-white text-center p-4 mt-10">
+      <p>&copy; 2021 Ai Blog Generator. All rights reserved.</p>
+    </footer>
+
+    <script></script>
+  </body>
+</html>
